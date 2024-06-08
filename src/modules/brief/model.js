@@ -2,10 +2,6 @@ import mongoose, { Schema } from "mongoose";
 
 const briefRequestSchema = new Schema(
   {
-    userAgent: {
-      type: String,
-    },
-
     type: {
       type: String,
       required: true,

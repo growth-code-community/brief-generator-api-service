@@ -5,6 +5,9 @@ import {
   notFoundHandler,
 } from "./src/middlewares/error.js";
 import { logger } from "./src/utils/logger.js";
+import swaggerUi from "swagger-ui-express";
+import fs from 'fs';
+import YAML from 'yaml';
 import cors from "cors";
 import helmet from "helmet";
 import { connectToDatabase } from "./src/utils/database.js";
@@ -21,8 +24,11 @@ app.use(helmet());
 app.get("/", (req, res) => {
   return respond(res, 200, "brief generator is ready to serve 🚀🚀");
 });
+const file = fs.readFileSync('docs/api.yaml', 'utf8')
+const swaggerDocument = YAML.parse(file)
 
-app.use("/v1/brief", brief);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use("/generate-brief", brief);
 
 app.use(globalErrorHandler);
 app.use(notFoundHandler);
