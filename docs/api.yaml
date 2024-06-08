@@ -1,0 +1,96 @@
+openapi: 3.0.0
+x-stoplight:
+  id: v5zfe5revno9v
+info:
+  title: brief-generator-api
+  version: '1.0'
+  description: |
+    This API is designed to generate briefs using AI. Users can input parameters to create a brief,  and optionally, export the generated brief via email.
+  contact:
+    name: API Support Team
+    email: support@briefgenerator.com
+    url: 'http://briefgenerator.com/support'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /generate-brief:
+    post:
+      summary: Generate Brief
+      operationId: generate-brief
+      responses:
+        '200':
+          description: Brief Generated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                  brief:
+                    type: string
+                x-examples:
+                  Example 1:
+                    status: string
+                    message: string
+                    brief: string
+              examples:
+                brief generated:
+                  value:
+                    status: string
+                    message: string
+                    brief: string
+        '400':
+          description: Missing Required Information
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                x-examples:
+                  Example 1:
+                    status: failed
+                    message: failed to generate brief
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                Example 1:
+                  UserAgent: string
+                  Type: string
+                  Industry: string
+                  CustomPrompt: string
+                  DateCreated: string
+              properties:
+                Type:
+                  type: string
+                Industry:
+                  type: string
+                CustomPrompt:
+                  type: string
+              required:
+                - Type
+                - Industry
+            examples:
+              create brief:
+                value:
+                  Type: string
+                  Industry: string
+                  CustomPrompt: string
+        description: Post the necessary fields for the API to generate a brief
+      description: Generate an AI Brief
+      tags:
+        - ai-brief
+    parameters: []
+components:
+  schemas: {}
+tags:
+  - name: ai-brief
