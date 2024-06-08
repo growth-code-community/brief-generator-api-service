@@ -1,5 +1,5 @@
 import { logger } from "../../utils/logger.js";
-import { BriefRequest } from "./model.js";
+import { BriefRequest, BriefResponse } from "./model.js";
 
 async function createRequest(data){
     try{
@@ -9,9 +9,12 @@ async function createRequest(data){
     }
 }
 
-async function createResponse(data){
+async function createResponse(briefId, response){
     try{
-        return await BriefResponse.create({...data})
+        return await BriefResponse.create({
+            brief_id: briefId,
+            brief_response: response
+        })
     }catch(err){
         logger.error(err.stack)
     }

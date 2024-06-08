@@ -1,7 +1,7 @@
 import express from 'express';
-import { createBriefRequest } from './controller.js';
+import { createBrief } from './controller.js';
 const brief = express.Router();
 
-brief.post('/', createBriefRequest)
+brief.post('/', createBrief)
 
 export default brief;
