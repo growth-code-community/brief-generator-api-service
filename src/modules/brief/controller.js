@@ -27,7 +27,7 @@ export async function createBrief(req, res, next) {
     const geminiResult = await chatSession.sendMessage(prompt.data);
     const geminiResponse = geminiResult.response.text();
     await repository.createResponse(brief.id, geminiResponse);
-    return respond(res, 201, "Brief succesfully created", { geminiResponse });
+    return respond(res, 201, "Brief created succesfully", { geminiResponse });
   } catch (err) {
     next(err);
   }
