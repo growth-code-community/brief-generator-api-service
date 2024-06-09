@@ -1,4 +1,4 @@
-import geminAIModel from "../../services/ai/gemini.js";
+import  chatSession from "../../services/ai/gemini.js";
 import { createPrompt } from "../../services/ai/prompt.js";
 import { config } from "../../utils/config.js";
 import { respond } from "../../utils/respond.js";
@@ -20,10 +20,6 @@ export async function createBrief(req, res, next) {
     const validatedData = await createRequestSchema.validateAsync(req.body);
     const brief = await repository.createRequest(validatedData);
     const prompt = createPrompt(validatedData);
-    const chatSession = geminAIModel.startChat({
-      generationConfig: config.GOOGLE_GEMINI_generationConfig,
-      history: [],
-    });
     const geminiResult = await chatSession.sendMessage(prompt.data);
     const geminiResponse = geminiResult.response.text();
     await repository.createResponse(brief.id, geminiResponse);

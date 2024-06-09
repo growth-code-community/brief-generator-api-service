@@ -965,3 +965,40 @@
 {"level":"info","message":"Database connected"}
 {"level":"info","message":"Server started on port 3000"}
 {"level":"info","message":"Database connected"}
+{"level":"error","message":"Datbase connection failed: MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n    at NativeConnection.createClient (/Users/brain/Desktop/brief-generator/api-service/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:219:11)\n    at NativeConnection.openUri (/Users/brain/Desktop/brief-generator/api-service/node_modules/mongoose/lib/connection.js:822:34)\n    at connect (/Users/brain/Desktop/brief-generator/api-service/node_modules/mongoose/lib/mongoose.js:429:15)\n    at connectToDatabase (file:///Users/brain/Desktop/brief-generator/api-service/src/utils/database.js:14:11)\n    at file:///Users/brain/Desktop/brief-generator/api-service/server.js:18:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)\n    at async loadESM (node:internal/process/esm_loader:28:7)\n    at async handleMainPromise (node:internal/modules/run_main:113:12)"}
+{"level":"info","message":"Server started on port 3000"}
+{"level":"error","message":"Datbase connection failed: MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n    at NativeConnection.createClient (/Users/brain/Desktop/brief-generator/api-service/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:219:11)\n    at NativeConnection.openUri (/Users/brain/Desktop/brief-generator/api-service/node_modules/mongoose/lib/connection.js:822:34)\n    at connect (/Users/brain/Desktop/brief-generator/api-service/node_modules/mongoose/lib/mongoose.js:429:15)\n    at connectToDatabase (file:///Users/brain/Desktop/brief-generator/api-service/src/utils/database.js:14:11)\n    at file:///Users/brain/Desktop/brief-generator/api-service/server.js:18:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)\n    at async loadESM (node:internal/process/esm_loader:28:7)\n    at async handleMainPromise (node:internal/modules/run_main:113:12)"}
+{"level":"info","message":"Server started on port 3000"}
+{"level":"error","message":"Datbase connection failed: MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n    at NativeConnection.createClient (/Users/brain/Desktop/brief-generator/api-service/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:219:11)\n    at NativeConnection.openUri (/Users/brain/Desktop/brief-generator/api-service/node_modules/mongoose/lib/connection.js:822:34)\n    at connect (/Users/brain/Desktop/brief-generator/api-service/node_modules/mongoose/lib/mongoose.js:429:15)\n    at connectToDatabase (file:///Users/brain/Desktop/brief-generator/api-service/src/utils/database.js:14:11)\n    at file:///Users/brain/Desktop/brief-generator/api-service/server.js:18:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)\n    at async loadESM (node:internal/process/esm_loader:28:7)\n    at async handleMainPromise (node:internal/modules/run_main:113:12)"}
+{"level":"info","message":"Server started on port 3000"}
+{"level":"info","message":"Server started on port 3000"}
+{"level":"info","message":"Database connected"}
+{"level":"error","message":"ValidationError: \"custom_prompt\" is not allowed to be empty"}
+{"level":"info","message":"Server started on port 3000"}
+{"level":"info","message":"Database connected"}
+{"level":"error","message":"Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{\"@type\":\"type.googleapis.com/google.rpc.ErrorInfo\",\"reason\":\"API_KEY_INVALID\",\"domain\":\"googleapis.com\",\"metadata\":{\"service\":\"generativelanguage.googleapis.com\"}}]\n    at _makeRequestInternal (file:///Users/brain/Desktop/brief-generator/api-service/node_modules/@google/generative-ai/dist/index.mjs:351:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async generateContent (file:///Users/brain/Desktop/brief-generator/api-service/node_modules/@google/generative-ai/dist/index.mjs:750:22)\n    at async ChatSession.sendMessage (file:///Users/brain/Desktop/brief-generator/api-service/node_modules/@google/generative-ai/dist/index.mjs:1025:9)\n    at async createBrief (file:///Users/brain/Desktop/brief-generator/api-service/src/modules/brief/controller.js:23:26)"}
+{"level":"info","message":"Server started on port 3000"}
+{"level":"info","message":"Database connected"}
+{"level":"info","message":"Server started on port 3000"}
+{"level":"info","message":"Database connected"}
+{"level":"info","message":"Server started on port 3000"}
+{"level":"info","message":"Database connected"}
+{"level":"error","message":"ValidationError: \"custom_prompt\" is not allowed to be empty"}
+{"level":"info","message":"Server started on port 3000"}
+{"level":"info","message":"Database connected"}
+{"level":"error","message":"ValidationError: \"custom_prompt\" is not allowed to be empty"}
+{"level":"info","message":"Server started on port 3000"}
+{"level":"info","message":"Database connected"}
+{"level":"error","message":"ValidationError: \"custom_prompt\" is not allowed to be empty"}
+{"level":"info","message":"Server started on port 3000"}
+{"level":"info","message":"Database connected"}
+{"level":"error","message":"ValidationError: \"custom_prompt\" is not allowed to be empty"}
+{"level":"info","message":"Server started on port 3000"}
+{"level":"info","message":"Database connected"}
+{"level":"error","message":"ValidationError: \"custom_prompt\" is not allowed"}
+{"level":"info","message":"Server started on port 3000"}
+{"level":"info","message":"Database connected"}
+{"level":"error","message":"ValidationError: \"custom_prompt\" is not allowed to be empty"}
+{"level":"info","message":"Server started on port 3000"}
+{"level":"info","message":"Database connected"}
+{"level":"info","message":"Server started on port 3000"}
